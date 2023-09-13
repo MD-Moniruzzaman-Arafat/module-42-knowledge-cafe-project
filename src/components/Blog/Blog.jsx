@@ -1,4 +1,5 @@
 import PropType from 'prop-types';
+import { BiBookmark } from "react-icons/bi";
 
 const Blog = ({ blog }) => {
     console.log(blog)
@@ -14,11 +15,11 @@ const Blog = ({ blog }) => {
                             <p className='text-[#11111199]'>{blog.posted_date}</p>
                         </div>
                     </div>
-                    <p className='text-[#11111199]'>{`${blog.reading_time} min read`}</p>
+                    <p className='text-[#11111199] flex gap-2 items-center'>{`${blog.reading_time} min read `} <button><BiBookmark></BiBookmark></button></p>
                 </div>
                 <h1 className='font-bold text-4xl'>{blog.title}</h1>
                 <p className='text-[#11111199]'>{`#${blog.tags[0]} #${blog.tags[1]} #${blog.tags[2]}`}</p>
-                <a href="">Mark as read</a>
+                <a href="" className='text-[#6047EC] border-b-2 border-[#6047EC]'>Mark as read</a>
             </div>
         </>
     );
