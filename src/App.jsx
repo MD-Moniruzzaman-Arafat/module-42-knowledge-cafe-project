@@ -15,10 +15,10 @@ function App() {
     // console.log(book)
   }
 
-  const handleTotalTime = (id,time) => {
+  const handleTotalTime = (id, time) => {
     setTotalTime(totalTime + time)
-    
-    const removeBookmark = bookmarks.filter(bookmark => bookmark.id !== id)
+
+    const removeBookmark = bookmarks.filter(bookmark => bookmark.id != id)
     setBookmarks(removeBookmark);
   }
 
